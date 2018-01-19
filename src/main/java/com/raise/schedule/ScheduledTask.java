@@ -5,6 +5,10 @@ import org.springframework.stereotype.Component;
 
 import java.text.SimpleDateFormat;
 
+/**
+ * 定时调度任务
+ * 作为统计,爬虫等用途
+ */
 @Component
 public class ScheduledTask {
 
@@ -23,7 +27,7 @@ public class ScheduledTask {
 //        System.out.println(String.format("===第%s次执行，当前时间为：%s", count1++, dateFormat.format(new Date())));
         start_python();
     }
-    
+
     //http://blog.csdn.net/evilcry2012/article/details/51979205
     @Scheduled(cron = "0 0 1 * * *")
     public void reportCurrentTimeCron() throws InterruptedException {
